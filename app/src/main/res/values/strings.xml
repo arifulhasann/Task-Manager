@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Task Manager</string>
+    <string name="edit_icon_desc">Edit item</string>
+    <string name="delete_icon_desc">Delete item</string>
+</resources>

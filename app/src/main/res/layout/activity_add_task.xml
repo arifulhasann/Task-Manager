@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFC9C9"
+    tools:context=".AddTaskActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+
+        android:hint="Task Title"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="#F3FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="Date-(YY-MM-DD)"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="#F3FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/statusInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="Completion Status"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="#F3FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateInputLayout"
+        app:layout_constraintVertical_bias="0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/input_note"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/box_shape"
+        android:gravity="top"
+        android:padding="8dp"
+        android:hint=" Start Typing"
+        android:inputType="textMultiLine"
+        android:lineSpacingMultiplier="1.8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusInputLayout"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/save_btn"
+        android:text="S a v e"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/adamina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_note" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
